@@ -64,8 +64,10 @@ The draft MUST:
 - Reference the specific company and role naturally
 - Avoid generic filler phrases like "I am writing to express my interest" or "I believe I would be a great fit"
 - Sound human, not templated
+- Structure the body into 2–3 clear paragraphs separated by blank lines (use \\n\\n between paragraphs)
 - For cold emails: be direct, concise, and compelling — the subject line should be specific and attention-grabbing
 - For cover letters: follow standard cover letter structure but keep it concise and impactful
+- End the body with a sign-off block: after the last paragraph, add two blank lines, then "[Your Name]" on its own line, and "[Your Profession]" on the next line
 
 ${mode === "cold_email" ? 'Respond with ONLY a JSON object: {"subject": "...", "body": "..."}' : 'Respond with ONLY a JSON object: {"subject": "Cover Letter — ' + role + " at " + company + '", "body": "..."}'}
 
