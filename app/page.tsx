@@ -11,6 +11,7 @@ interface FormData {
   role: string;
   jobDescription: string;
   background: string;
+  name: string;
   tone: string;
 }
 

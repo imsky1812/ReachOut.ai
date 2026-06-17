@@ -8,6 +8,7 @@ interface FormData {
   role: string;
   jobDescription: string;
   background: string;
+  name: string;
   tone: string;
 }
 
@@ -31,6 +32,7 @@ export default function GeneratorForm({
   const [role, setRole] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [background, setBackground] = useState("");
+  const [name, setName] = useState("");
   const [tone, setTone] = useState("Professional");
 
   const [isFindingEmail, setIsFindingEmail] = useState(false);
@@ -46,7 +48,7 @@ export default function GeneratorForm({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!canGenerate) return;
-    onGenerate({ mode, company, role, jobDescription, background, tone });
+    onGenerate({ mode, company, role, jobDescription, background, name, tone });
   };
 
   const handleFindEmail = async () => {
@@ -179,6 +181,21 @@ export default function GeneratorForm({
           onChange={(e) => setBackground(e.target.value)}
           required
           style={{ resize: "vertical", minHeight: "90px" }}
+        />
+      </div>
+
+      {/* Your Name */}
+      <div className="mb-4">
+        <label htmlFor="name-input" className="label-typewriter">
+          Your Name
+        </label>
+        <input
+          id="name-input"
+          type="text"
+          className="form-input"
+          placeholder="e.g. Sarvesh Kumar Yadav"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
       </div>
 

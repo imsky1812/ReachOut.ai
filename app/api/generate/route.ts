@@ -8,6 +8,7 @@ interface GenerateRequestBody {
   role: string;
   jobDescription?: string;
   background: string;
+  name?: string;
   tone: string;
 }
 
@@ -23,7 +24,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { mode, company, role, jobDescription, background, tone } = body;
+  const { mode, company, role, jobDescription, background, name, tone } = body;
 
   // Server-side validation
   if (!company || !role || !background || !mode || !tone) {
@@ -67,7 +68,7 @@ The draft MUST:
 - Structure the body into 2–3 clear paragraphs separated by blank lines (use \\n\\n between paragraphs)
 - For cold emails: be direct, concise, and compelling — the subject line should be specific and attention-grabbing
 - For cover letters: follow standard cover letter structure but keep it concise and impactful
-- End the body with a sign-off block: after the last paragraph, add two blank lines, then "[Your Name]" on its own line, and "[Your Profession]" on the next line
+- End the body with a sign-off block: after the last paragraph, add two blank lines, then "${name || "[Your Name]"}" on its own line, and "[Your Profession]" on the next line
 
 ${mode === "cold_email" ? 'Respond with ONLY a JSON object: {"subject": "...", "body": "..."}' : 'Respond with ONLY a JSON object: {"subject": "Cover Letter — ' + role + " at " + company + '", "body": "..."}'}
 
