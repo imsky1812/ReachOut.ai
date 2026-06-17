@@ -1,14 +1,17 @@
 # ReachOut — AI Cold Email & Cover Letter Writer
 
-**ReachOut** generates tailored cold outreach emails and cover letters in seconds, powered by AI. Paste a job posting, describe your background, pick a tone, and get a sharp, specific draft — not generic filler. It even tries to find the company's public HR email for you.
+**ReachOut** generates tailored cold outreach emails and cover letters in seconds, powered by AI. Paste a job posting, describe your background, pick a tone, add your name, and get a sharp, specific draft — not generic filler. It even tries to find the company's public HR email for you.
+
+🚀 **Live Demo:** [https://reachoutai-ten.vercel.app/](https://reachoutai-ten.vercel.app/)
 
 ## Why it's useful
 
-- **Saves hours** of drafting and rewriting outreach emails from scratch
-- **Tailored to each role** — the AI uses your actual background and the job description to write something specific
-- **Find HR contacts** — a one-click search attempts to locate the company's public HR/careers email via DuckDuckGo
-- **Multiple export options** — copy, download as .txt, or open directly in your email client with everything pre-filled
-- **Free forever** — runs entirely on free tiers (Groq, Vercel, GitHub)
+- **Saves hours** of drafting and rewriting outreach emails from scratch.
+- **Tailored to each role** — the AI uses your actual background, name, and the job description to write something specific.
+- **Find HR contacts** — a one-click search attempts to locate the company's public HR/careers email via DuckDuckGo.
+- **Personalized Sign-Off** — enter your name and profession to automatically sign off the generated draft.
+- **Multiple export options** — copy, download as .txt, or open directly in your email client with everything pre-filled.
+- **Free forever** — runs entirely on free tiers (Groq, Vercel, GitHub).
 
 ## Tech Stack
 
@@ -23,8 +26,8 @@
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/reachout-ai.git
-cd reachout-ai
+git clone https://github.com/imsky1812/ReachOut.ai.git
+cd ReachOut.ai
 npm install
 ```
 
@@ -66,14 +69,14 @@ Create a new public repo on GitHub and push your code:
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/reachout-ai.git
+git remote add origin https://github.com/imsky1812/ReachOut.ai.git
 git push -u origin main
 ```
 
 ### 2. Import in Vercel
 
 1. Go to [vercel.com/new](https://vercel.com/new)
-2. Click **Import** next to your `reachout-ai` repository
+2. Click **Import** next to your `ReachOut.ai` repository
 3. Vercel auto-detects Next.js — leave all settings as default
 
 ### 3. Add environment variables
@@ -84,7 +87,7 @@ git push -u origin main
 
 ### 4. Done!
 
-Your app will be live at `your-project.vercel.app` in about a minute.
+Your app will be live at `reachoutai-ten.vercel.app` (or your custom Vercel subdomain).
 
 ## Project Structure
 
