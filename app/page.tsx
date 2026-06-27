@@ -65,54 +65,61 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Header */}
-      <header className="bg-ink-deep-2 px-4 md:px-8 py-4" id="site-header">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-          <h1
-            className="font-serif text-xl font-bold text-paper tracking-tight"
-            id="brand-name"
-          >
-            ReachOut
-          </h1>
-          <p className="text-paper/50 text-sm" id="brand-tagline">
-            Cold emails and cover letters, written and addressed for you.
-          </p>
-        </div>
-      </header>
+    <div className="relative flex flex-col min-h-screen bg-bg-deep overflow-hidden">
+      {/* Liquid Background Blobs */}
+      <div className="liquid-blob blob-violet" aria-hidden="true" />
+      <div className="liquid-blob blob-cyan" aria-hidden="true" />
+      <div className="liquid-blob blob-rose" aria-hidden="true" />
 
-      {/* Main Content */}
-      <main className="flex-1 px-4 md:px-8 py-8 md:py-12" id="main-content">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr] gap-6 lg:gap-8 items-start">
-            {/* Left: Form */}
-            <div>
-              <GeneratorForm
-                onGenerate={handleGenerate}
-                isGenerating={isGenerating}
-                recipientEmail={recipientEmail}
-                setRecipientEmail={setRecipientEmail}
-              />
-            </div>
+      <div className="relative z-10 flex flex-col min-h-screen">
+        {/* Header */}
+        <header className="border-b border-white/5 bg-white/[0.01] backdrop-blur-md px-4 md:px-8 py-5" id="site-header">
+          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
+            <h1
+              className="font-display text-2xl font-extrabold text-white tracking-tight"
+              id="brand-name"
+            >
+              ReachOut<span className="text-cyan-glow">.ai</span>
+            </h1>
+            <p className="text-white/45 text-[10px] font-mono tracking-widest uppercase" id="brand-tagline">
+              Cold outreach, generated and addressed for you
+            </p>
+          </div>
+        </header>
 
-            {/* Right: Preview */}
-            <div>
-              <LetterPreview
-                subject={generatedSubject}
-                body={generatedBody}
-                mode={currentMode}
-                company={currentCompany}
-                role={currentRole}
-                recipientEmail={recipientEmail}
-                error={error}
-              />
+        {/* Main Content */}
+        <main className="flex-1 px-4 md:px-8 py-8 md:py-12" id="main-content">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr] gap-6 lg:gap-10 items-start">
+              {/* Left: Form */}
+              <div>
+                <GeneratorForm
+                  onGenerate={handleGenerate}
+                  isGenerating={isGenerating}
+                  recipientEmail={recipientEmail}
+                  setRecipientEmail={setRecipientEmail}
+                />
+              </div>
+
+              {/* Right: Preview */}
+              <div>
+                <LetterPreview
+                  subject={generatedSubject}
+                  body={generatedBody}
+                  mode={currentMode}
+                  company={currentCompany}
+                  role={currentRole}
+                  recipientEmail={recipientEmail}
+                  error={error}
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
 
-      {/* Footer */}
-      <Footer />
+        {/* Footer */}
+        <Footer />
+      </div>
     </div>
   );
 }

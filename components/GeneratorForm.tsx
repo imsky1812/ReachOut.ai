@@ -87,7 +87,7 @@ export default function GeneratorForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-paper rounded-xl p-6 md:p-8 shadow-lg"
+      className="bg-white/[0.01] border border-white/5 backdrop-blur-xl rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden"
       id="generator-form"
     >
       {/* Mode Toggle */}
@@ -210,10 +210,10 @@ export default function GeneratorForm({
           value={tone}
           onChange={(e) => setTone(e.target.value)}
         >
-          <option value="Professional">Professional</option>
-          <option value="Friendly">Friendly</option>
-          <option value="Confident">Confident</option>
-          <option value="Concise">Concise</option>
+          <option className="bg-surface-obsidian text-white/90" value="Professional">Professional</option>
+          <option className="bg-surface-obsidian text-white/90" value="Friendly">Friendly</option>
+          <option className="bg-surface-obsidian text-white/90" value="Confident">Confident</option>
+          <option className="bg-surface-obsidian text-white/90" value="Concise">Concise</option>
         </select>
       </div>
 

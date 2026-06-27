@@ -77,7 +77,7 @@ export default function LetterPreview({
   return (
     <div className="relative">
       {/* Torn paper top edge */}
-      <div className="torn-paper-top bg-paper rounded-xl p-6 md:p-8 shadow-lg min-h-[400px] flex flex-col">
+      <div className="torn-paper-top p-6 md:p-8 min-h-[400px] flex flex-col">
         {/* Postmark stamp badge */}
         {hasContent && !error && (
           <div
@@ -85,9 +85,7 @@ export default function LetterPreview({
             aria-label="Ready to send"
             id="postmark-badge"
           >
-            ✦ READY
-            <br />
-            TO SEND ✦
+            ✦ READY TO SEND ✦
           </div>
         )}
 
@@ -98,7 +96,7 @@ export default function LetterPreview({
             id="letter-error"
           >
             <div className="text-center max-w-sm">
-              <div className="text-3xl mb-3" aria-hidden="true">
+              <div className="text-3xl mb-3 text-stamp" aria-hidden="true">
                 ✕
               </div>
               <p className="text-stamp font-medium text-sm">{error}</p>
@@ -113,10 +111,10 @@ export default function LetterPreview({
             id="letter-empty-state"
           >
             <div className="text-center max-w-xs">
-              <div className="text-4xl mb-4 opacity-30" aria-hidden="true">
+              <div className="text-4xl mb-4 text-white/20" aria-hidden="true">
                 ✉
               </div>
-              <p className="text-ink-muted text-sm leading-relaxed">
+              <p className="text-white/40 text-sm leading-relaxed">
                 Fill in the form and generate your first draft — it&apos;ll
                 appear here.
               </p>
@@ -129,17 +127,17 @@ export default function LetterPreview({
           <div className="flex-1 flex flex-col" id="letter-output">
             {/* Subject / Heading */}
             <h2
-              className="font-serif text-xl md:text-2xl font-semibold text-ink mb-4 pr-28 leading-snug"
+              className="font-display text-xl md:text-2xl font-bold text-white mb-4 pr-28 leading-snug"
               id="letter-subject"
             >
               {heading}
             </h2>
 
-            <div className="w-12 h-0.5 bg-paper-dim mb-5" aria-hidden="true" />
+            <div className="w-12 h-0.5 bg-white/10 mb-5" aria-hidden="true" />
 
             {/* Body */}
             <div
-              className="text-ink text-[0.925rem] leading-[1.7] whitespace-pre-wrap flex-1 mb-6 max-w-prose"
+              className="text-white/80 text-[0.925rem] leading-[1.7] whitespace-pre-wrap flex-1 mb-6 max-w-prose font-sans"
               id="letter-body"
             >
               {body}
@@ -147,7 +145,7 @@ export default function LetterPreview({
 
             {/* Action Row */}
             <div
-              className="flex flex-wrap gap-2 pt-4 border-t border-paper-dim"
+              className="flex flex-wrap gap-2 pt-4 border-t border-white/5"
               id="letter-actions"
             >
               <button

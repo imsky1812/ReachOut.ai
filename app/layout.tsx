@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
-import { Source_Serif_4, Special_Elite, Inter } from "next/font/google";
+import { Sora, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const sourceSerif = Source_Serif_4({
-  variable: "--font-source-serif",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  display: "swap",
-});
-
-const specialElite = Special_Elite({
-  variable: "--font-special-elite",
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sourceSerif.variable} ${specialElite.variable} ${inter.variable} h-full`}
+      className={`${sora.variable} ${inter.variable} ${jetbrainsMono.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
