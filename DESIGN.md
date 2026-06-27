@@ -1,46 +1,48 @@
-# Design System Strategy: Liquid Glass
+# Design System Strategy: Dark Cyber-Neo-Brutalism
 
 ## 1. Overview & Brand Personality
-The brand personality is **avant-garde, visionary, and luminous**. ReachOut.ai helps users craft precise, personalized messages using advanced AI. The design system matches this intelligence with a deep, immersive space-like environment. The core concept is **"Liquid Glass"**—a mixture of obsidian glass surfaces, soft backdrop blurs, and organic glowing blobs of light that flow smoothly, creating a feeling of infinite depth and modern technical luxury.
+The brand personality is **raw, high-contrast, technical, and unapologetic**. ReachOut.ai helps users craft precise, personalized messages using advanced AI. The design system reinforces this with a **Dark Cyber-Neo-Brutalist** theme. The core concept uses flat surfaces, thick borders, sharp corners, tactile active offsets, and solid high-contrast neon drop shadows over a retro-tech dot-grid canvas.
 
 ---
 
-## 2. Colors: Obsidian & Glowing Emissions
-The palette centers around nocturnal dark surfaces and vibrant, soft light-emitting colors.
+## 2. Colors: High-Contrast Cyber Nocturnal
+The palette centers around deep dark backgrounds and vibrant, saturated neon elements.
 
 ### Base Canvas
-*   `background`: #07080e (Deep midnight void)
-*   `surface`: #0c0d16 (Frosted dark obsidian)
-*   `surface-container`: rgba(255, 255, 255, 0.03) (Obsidian glass layer)
+*   `background`: #07080e (Midnight void)
+*   `surface`: #0c0d16 (Deep space container)
+*   `surface-brutal`: #121324 (Flat brutalist surface)
 
-### Liquid Accent Gradients
-*   `primary`: #a78bfa (Soft glowing violet)
-*   `primary-dim`: #7c3aed (Deep violet)
-*   `secondary`: #22d3ee (Luminous cyan)
+### Brutalist Accents & Shadows
+*   `primary`: #a78bfa (Vibrant violet)
+*   `secondary`: #22d3ee (Neon cyan)
 *   `tertiary`: #f43f5e (Neon rose)
-*   `success`: #10b981 (Emerald accent)
-
-### Borders & Reflections
-*   `outline`: rgba(255, 255, 255, 0.06) (Thin light reflection edge)
-*   `outline-variant`: rgba(255, 255, 255, 0.12) (Slightly stronger hover reflection)
+*   `success`: #10b981 (Retro green)
+*   `border-white`: #ffffff (Solid white border)
+*   `border-cyan`: #22d3ee (Solid cyan border)
+*   `border-violet`: #a78bfa (Solid violet border)
 
 ---
 
-## 3. Typography: Sora & Inter font pairing
-*   **Headlines & Display (Sora)**: Wide apertures, bold geometric letterforms. Large display text should use letter-spacing: -0.02em to maintain a tight, designed feel.
-*   **Body & Descriptions (Inter)**: Excellent legibility, 1.6 line height for prose, ensuring zero cognitive fatigue.
+## 3. Typography: Sora & Inter Font Pairing
+*   **Headlines & Display (Sora)**: Bold, wide, geometric letterforms. Neo-brutalist titles use uppercase, thick borders, or flat text offset styling.
+*   **Body & Descriptions (Inter)**: Clean, high-legibility sans-serif with a comfortable line height.
 *   **Labels & Metadata (JetBrains Mono)**: Used for status tags, system indicators, and uppercase tracked-out captions.
 
 ---
 
-## 4. Depth & Elevation
-No dark shadows are used. Depth is achieved via **Luminance, Blurs, and Inner Glows**:
-*   **Level 1 (Glass Cards)**: `background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.06);`
-*   **Level 2 (Active elements)**: Glass fill with a soft radial glow matching `primary` or `secondary` colors at 10% opacity.
+## 4. Layout, Borders & Shadows
+Instead of soft blurs or organic glows, depth is simulated using physical offsets and hard shadows:
+*   **Borders**: Solid, thick borders (`2px`) in white or neon accents on all containers, inputs, and buttons.
+*   **Shadows**: Pitch-black or vibrant neon flat shadows offset by `5px` or `6px` with zero blur:
+    *   Example: `box-shadow: 5px 5px 0px 0px var(--color-cyan-glow);`
+*   **Tactile Animation**: Hovering or clicking translates the element downward and rightward by `5px`, reducing the offset shadow to `0px` to simulate a physical push-button press:
+    *   `transform: translate(5px, 5px); box-shadow: 0px 0px 0px 0px transparent;`
 
 ---
 
 ## 5. Components & Interactions
-*   **Segmented Control**: An organic glass capsule. The active segment has a subtle white glass fill (`rgba(255, 255, 255, 0.08)`) and shifts position with a spring-like ease.
-*   **Glass Inputs**: Obsidian background with standard border at `outline` opacity. On focus, the border changes to the glowing primary color, and the input gets a subtle back-glow.
-*   **Buttons**: Luminous pill shapes with gradients (`primary` to `secondary`). On hover, they lift (`transform: translateY(-2px)`) and increase their outer glow.
+*   **Segmented Control**: Flat rectangles with thick white borders. The active segment is a solid white or primary color block with sharp corners.
+*   **Brutalist Inputs**: Flat background with a `2px` white border. On focus, they slide into their neon offset shadow.
+*   **Tactile Buttons**: Rectangular buttons with bold text, solid colors, thick borders, and hard offset shadows. On hover/active, they press down.
+*   **Postmark Stamp**: Styled like a retro physical stamp with a thick border, rotated slightly, and showing a solid neon background.

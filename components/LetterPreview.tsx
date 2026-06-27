@@ -111,10 +111,10 @@ export default function LetterPreview({
             id="letter-empty-state"
           >
             <div className="text-center max-w-xs">
-              <div className="text-4xl mb-4 text-white/20" aria-hidden="true">
+              <div className="text-4xl mb-4 text-cyan-glow" aria-hidden="true">
                 ✉
               </div>
-              <p className="text-white/40 text-sm leading-relaxed">
+              <p className="text-white/70 text-sm leading-relaxed">
                 Fill in the form and generate your first draft — it&apos;ll
                 appear here.
               </p>
@@ -133,7 +133,7 @@ export default function LetterPreview({
               {heading}
             </h2>
 
-            <div className="w-12 h-0.5 bg-white/10 mb-5" aria-hidden="true" />
+            <div className="w-16 h-[2px] bg-white mb-5" aria-hidden="true" />
 
             {/* Body */}
             <div
@@ -145,7 +145,7 @@ export default function LetterPreview({
 
             {/* Action Row */}
             <div
-              className="flex flex-wrap gap-2 pt-4 border-t border-white/5"
+              className="flex flex-wrap gap-2 pt-4 border-t-2 border-white"
               id="letter-actions"
             >
               <button

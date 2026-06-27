@@ -87,7 +87,7 @@ export default function GeneratorForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white/[0.01] border border-white/5 backdrop-blur-xl rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden"
+      className="brutal-card-violet p-6 md:p-8 relative overflow-hidden"
       id="generator-form"
     >
       {/* Mode Toggle */}

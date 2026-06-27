@@ -65,23 +65,18 @@ export default function Home() {
   };
 
   return (
-    <div className="relative flex flex-col min-h-screen bg-bg-deep overflow-hidden">
-      {/* Liquid Background Blobs */}
-      <div className="liquid-blob blob-violet" aria-hidden="true" />
-      <div className="liquid-blob blob-cyan" aria-hidden="true" />
-      <div className="liquid-blob blob-rose" aria-hidden="true" />
-
+    <div className="relative flex flex-col min-h-screen bg-bg-deep brutal-dot-grid overflow-x-hidden">
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Header */}
-        <header className="border-b border-white/5 bg-white/[0.01] backdrop-blur-md px-4 md:px-8 py-5" id="site-header">
+        <header className="border-b-2 border-white bg-surface-obsidian px-4 md:px-8 py-5" id="site-header">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
             <h1
-              className="font-display text-2xl font-extrabold text-white tracking-tight"
+              className="font-display text-2xl font-black text-white tracking-tight"
               id="brand-name"
             >
               ReachOut<span className="text-cyan-glow">.ai</span>
             </h1>
-            <p className="text-white/45 text-[10px] font-mono tracking-widest uppercase" id="brand-tagline">
+            <p className="text-violet-glow text-[10px] font-mono tracking-widest uppercase font-bold" id="brand-tagline">
               Cold outreach, generated and addressed for you
             </p>
           </div>
